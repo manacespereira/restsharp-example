@@ -1,0 +1,28 @@
+﻿@model List<ClientesMVC.Models.Cliente>
+@{
+    ViewBag.Title = "Lista de Clientes";
+}
+
+<div class="jumbotron">
+    <h1 class="text-center">Clínica Freedom</h1>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>Usuário</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Name</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.UserName</td>
+            </tr>
+        }
+    </tbody>
+</table>
